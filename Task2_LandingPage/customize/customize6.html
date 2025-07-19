@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customize Template 6 (Event)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    .editor-panel {
+      width: 350px;
+      background: #f0f0f0;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .editor-panel label {
+      display: block;
+      margin-top: 12px;
+    }
+
+    .editor-panel input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .download-btn {
+      margin-top: 20px;
+      background: #2ecc71;
+      border: none;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    iframe {
+      flex: 1;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="editor-panel">
+    <a href="../index.html" style="text-decoration: none;">
+      <button class="download-btn">← Back to Home</button>
+    </a>
+
+    <h2>🎤 Customize Event</h2>
+
+    <label>Event Title</label>
+    <input type="text" id="eventTitle" value="🎤 TechFest 2025" oninput="updatePreview()" />
+
+    <label>Event Date & Location</label>
+    <input type="text" id="eventDate" value="July 25-26 · Bengaluru" oninput="updatePreview()" />
+
+    <label>Speaker 1</label>
+    <input type="text" id="speaker1" value="👩‍💻 Anjali Mehta - AI Researcher" oninput="updatePreview()" />
+
+    <label>Speaker 2</label>
+    <input type="text" id="speaker2" value="🧑‍🔧 Rohan Das - DevOps Expert" oninput="updatePreview()" />
+
+    <label>Agenda 1</label>
+    <input type="text" id="agenda1" value="🚀 Day 1 - Innovation & AI" oninput="updatePreview()" />
+
+    <label>Agenda 2</label>
+    <input type="text" id="agenda2" value="💡 Day 2 - Cloud & DevOps" oninput="updatePreview()" />
+
+    <label>Venue</label>
+    <input type="text" id="venue" value="India Habitat Centre, Bengaluru" oninput="updatePreview()" />
+
+    <label>CTA Button Text</label>
+    <input type="text" id="ctaBtn" value="🎟 Register Now" oninput="updatePreview()" />
+
+    <button class="download-btn" onclick="downloadHTML()">⬇️ Download Page</button>
+  </div>
+
+  <iframe id="previewFrame" src="../templates/template6.html"></iframe>
+  <script src="../customize.js"></script>
+</body>
+</html>

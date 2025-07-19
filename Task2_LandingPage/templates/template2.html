@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --fg: #e2e8f0;
+      --accent: #f59e0b; 
+      --header-bg: linear-gradient(to right, #9333ea, #7c3aed); 
+      --card: #161b22;
+      --skill-bg: #1e293b;
+      --skill-text: #22c55e;
+      --hover-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+    }
+
+    a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    .back-preview {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: var(--fg);
+      color: var(--bg);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: 600;
+      z-index: 999;
+    }
+
+    header {
+      background: var(--header-bg);
+      padding: 40px 10px;
+      text-align: center;
+      color: white;
+      animation: fadeInDown 1s ease;
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      animation: fadeInDown 2s ease;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #d1d5db;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+      color: var(--accent);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 14px rgba(99,102,241,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--hover-shadow);
+    }
+
+    .skill {
+      background: var(--skill-bg);
+      color: var(--skill-text);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+    }
+
+    ul {
+      padding-left: 20px;
+      line-height: 1.7;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .contact p {
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #161b22;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .project-card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="../index.html" class="back-preview">← Exit</a>
+
+  <header>
+    <img src="https://static.vecteezy.com/system/resources/previews/042/332/066/non_2x/person-photo-placeholder-woman-default-avatar-profile-icon-grey-photo-placeholder-female-no-photo-images-for-unfilled-user-profile-greyscale-illustration-for-social-media-free-vector.jpg" alt="Profile Picture">
+    <h1>Hello, I'm Bindushree</h1>
+    <p>Frontend Developer & UI/UX Enthusiast</p>
+  </header>
+
+  <section class="fade-in">
+    <h2>🧑‍💻 About Me</h2>
+    <p>
+      I'm a passionate frontend developer focused on turning complex problems into beautiful user-friendly designs.
+      My journey started with HTML & CSS, but my love for interactivity led me into the world of JavaScript, React, and component-driven development.<br><br>
+      I've worked on responsive web apps, landing pages, and collaborative design-to-code workflows using Figma. 
+      I care deeply about design systems, accessibility, and creating seamless digital experiences.
+    </p>
+  </section>
+
+  <section class="fade-in">
+    <h2>🚀 Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A modern personal site built with HTML/CSS/JS showcasing skills and projects.</p>
+      </div>
+      <div class="project-card">
+        <h3>Task Manager App</h3>
+        <p>To-do app with filtering, localStorage, and a drag-and-drop UI.</p>
+      </div>
+      <div class="project-card">
+        <h3>Weather App</h3>
+        <p>Pulls real-time weather using OpenWeatherMap API with search by city.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="fade-in">
+    <h2>💼 Internships</h2>
+    <ul>
+      <li><strong>OutriX - Web Dev Intern (2025)</strong><br>Created responsive UI templates, landing pages & customization tools.</li>
+      <li><strong>NullClass - Data Analyst Intern (2025)</strong><br>Built machine learning model to predict student career paths.</li>
+    </ul>
+  </section>
+
+  <section class="fade-in">
+    <h2>🛠 Skills</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:10px;">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">React</span>
+      <span class="skill">Figma</span>
+      <span class="skill">Git</span>
+      <span class="skill">Responsive Design</span>
+    </div>
+  </section>
+
+  <section class="fade-in">
+    <h2>📜 Certifications</h2>
+    <ul>
+      <li>Web Development Fundamentals - IBM SkillsBuild (2025)</li>
+      <li>Software Engineering Job Simulation - Forage (2025)</li>
+      <li>Python for Beginners - Simplilearn (2025)</li>
+      <li>2nd Runner Up - OpenAI Hackathon by Certisured (2025)</li>
+    </ul>
+  </section>
+
+  <section class="contact fade-in">
+    <h2>📬 Contact</h2>
+    <p>Email: bindu@gmail.com</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/bindu" target="_blank">linkedin.com/in/bindu</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Bindushree. Connect with me !.
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

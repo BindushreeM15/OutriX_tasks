@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Personal Blog</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #fffdf6;
+      color: #333;
+    }
+
+    .back-preview {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #333;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      z-index: 999;
+    }
+
+    header {
+      background: #f2eecb;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-style: italic;
+      margin-top: 8px;
+    }
+
+    .posts {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .post {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-left: 5px solid #f2eecb;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+
+    .post.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .post h3 {
+      margin-top: 0;
+    }
+
+    .post img {
+      width: 20%;
+      display: block;
+      margin-left: 600px;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #eee;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .post img {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="../index.html" class="back-preview">← Exit</a>
+
+  <header>
+    <h1 id="blogTitle">🌼 My Cozy Blog</h1>
+    <p id="blogSubtitle">Thoughts, stories & ideas by Me</p>
+  </header>
+
+  <section class="posts">
+    <div class="post fade-in">
+      <h3 id="post1Title">📘 Why I Started Writing</h3>
+      <p id="post1Content">
+        Writing clears the mind and captures the soul. I never realized how impactful self-expression could be until I began blogging. 
+        It started as a personal outlet, but soon turned into a way to share my perspective with the world. <br><br>
+        Through each post, I learned more about myself and discovered the joy of inspiring others.
+        Blogging gave me a safe space to be authentic and vulnerable.
+      </p>
+      <img id="post1Image" src="https://img.freepik.com/premium-vector/letter-concept-illustration_114360-27243.jpg" />
+    </div>
+
+    <div class="post fade-in">
+      <h3 id="post2Title">🧠 Lessons from My Gap Year</h3>
+      <p id="post2Content">
+        My gap year was less about traveling and more about introspection. I spent time unlearning and relearning — slowing down helped me understand the value of rest.<br><br>
+        I explored new hobbies, experimented with freelance gigs, and read over 20 books. It wasn't planned, but it became the most growth-filled year of my life. <br><br>
+        It made me more resilient, creative, and ready to face uncertainty.
+      </p>
+      <img id="post2Image" src="https://static.vecteezy.com/system/resources/previews/008/985/748/non_2x/distance-learning-online-courses-and-business-education-online-books-and-textbooks-exam-preparation-home-schooling-flat-design-modern-illustration-vector.jpg" />
+    </div>
+
+    <div class="post fade-in">
+      <h3 id="post3Title">📚 What I'm Reading Now</h3>
+      <p id="post3Content">
+        Reading has become part of my daily routine. Currently, I'm diving into “Atomic Habits” by James Clear — it's a goldmine for building better routines.<br><br>
+        I'm also exploring short stories by Murakami — his writing has a dream-like quality that's oddly grounding. <br><br>
+        Books allow me to disconnect from the digital noise and reflect more deeply.
+      </p>
+      <img id="post3Image" src="https://img.freepik.com/premium-vector/woman-sitting-working-reading-book-room_760443-1059.jpg" />
+    </div>
+  </section>
+
+  <footer>
+    © 2025 My Cozy Blog · Built with ❤️
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(post => {
+      observer.observe(post);
+    });
+  </script>
+
+</body>
+</html>

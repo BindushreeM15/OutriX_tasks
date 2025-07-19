@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landing Page Selector</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎨 Choose Your Landing Page Template</h1>
+    <p>Select a template, preview it, customize it, and download your own version!</p>
+  </header>
+
+  <main class="template-grid">
+    <div class="template-card">
+      <img src="https://gloriumtech.com/wp-content/uploads/2023/10/A-New-Product-Development-Process-for-Startups.jpg" alt="Template 1 Preview">
+      <h3>Template 1 - Startup</h3>
+      <div class="actions">
+        <button onclick="previewTemplate('templates/template1.html')">🔍 Preview</button>
+        <button onclick="customizeTemplate(1)">🎨 Customize</button>
+      </div>
+    </div>
+
+    <div class="template-card">
+      <img src="https://media.istockphoto.com/id/1137470880/vector/people-vector-illustration-flat-cartoon-character-landing-page-template.jpg?s=612x612&w=0&k=20&c=_HPRNiholF1vID12DPaip2xqGJYBQmQvB4wXZ4psES8=" alt="Template 2 Preview">
+      <h3>Template 2 - Portfolio</h3>
+      <div class="actions">
+        <button onclick="previewTemplate('templates/template2.html')">🔍 Preview</button>
+        <button onclick="customizeTemplate(2)">🎨 Customize</button>
+      </div>
+    </div>
+
+    <div class="template-card">
+      <img src="https://img.freepik.com/premium-vector/creative-abstract-saas-illustration_52683-79843.jpg" alt="Template 3 Preview">
+      <h3>Template 3 - Product Page</h3>
+      <div class="actions">
+        <button onclick="previewTemplate('templates/template3.html')">🔍 Preview</button>
+        <button onclick="customizeTemplate(3)">🎨 Customize</button>
+      </div>
+    </div>
+
+    <div class="template-card">
+      <img src="https://img.freepik.com/premium-vector/outbound-marketing-flat-design-concept-illustration-people-characters_9209-5430.jpg" alt="Template 4 Preview">
+      <h3>Template 4 - Personal Blog</h3>
+      <div class="actions">
+        <button onclick="previewTemplate('templates/template4.html')">🔍 Preview</button>
+        <button onclick="customizeTemplate(4)">🎨 Customize</button>
+      </div>
+    </div>
+
+    <div class="template-card">
+      <img src="https://img.freepik.com/premium-vector/travel-agency-flat-design-concept-illustration-people-characters_9209-5409.jpg" alt="Template 5 Preview">
+      <h3>Template 5 - Agency Website</h3>
+      <div class="actions">
+        <button onclick="previewTemplate('templates/template5.html')">🔍 Preview</button>
+        <button onclick="customizeTemplate(5)">🎨 Customize</button>
+      </div>
+    </div>
+    
+    <div class="template-card">
+      <img src="https://img.freepik.com/free-vector/happy-tiny-business-people-dancing-having-fun-drinking-wine-corporate-party-team-building-activity-corporate-event-idea-concept-pinkish-coral-bluevector-isolated-illustration_335657-1414.jpg" alt="Template 6 Preview">
+      <h3>Template 6 -  Event/Conference</h3>
+      <div class="actions">
+        <button onclick="previewTemplate('templates/template6.html')">🔍 Preview</button>
+        <button onclick="customizeTemplate(6)">🎨 Customize</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

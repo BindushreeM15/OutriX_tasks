@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechFest 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0a0c11db;
+      color: #160707;
+    }
+    p{
+      color: white;
+}
+    .back-preview {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #e5e5e5;
+      color: #0d1117;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      z-index: 999;
+    }
+
+    header {
+      background: linear-gradient(to right, #db4e07,#fb3c1a, #f0751e );
+      color: white;
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-top: 10px;
+      color: #dcdcdc;
+    }
+
+    section {
+      max-width: 960px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #fff;
+    }
+
+    .card-group {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background: #161b22;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(99,102,241,0.2);
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      color: #e2e8f0;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .cta {
+      text-align: center;
+      margin: 80px 0 60px;
+    }
+
+    .cta button {
+      background: #6366f1;
+      color: white;
+      padding: 16px 32px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cta button:hover {
+      background: #4338ca;
+    }
+    @media (max-width: 768px) {
+  .cta-icon {
+    display: none;
+  }
+}
+
+    footer {
+      background: #161b22;
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    iframe {
+      border-radius: 12px;
+      margin-top: 20px;
+      width: 100%;
+      height: 250px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      .card { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="../index.html" class="back-preview">← Exit</a>
+
+  <header>
+    <h1 id="eventTitle">🎤 TechFest 2025</h1>
+    <p id="eventDate">July 25-26 · India Habitat Centre, Bengaluru</p>
+  </header>
+
+  <section class="fade-in">
+    <h2>👩‍🏫 Featured Speakers</h2>
+    <div class="card-group">
+      <div class="card" id="speaker1">
+        <img src="https://img.freepik.com/premium-vector/portrait-young-cheerful-woman-with-glasses-casual-style-clothes-isolated-vector-illustration_126609-257.jpg" alt="Anjali Mehta">
+        <h3>Anjali Mehta</h3>
+        <p>AI Researcher · Google</p>
+        <p>Ethical AI, LLMs, & India's role in the GenAI revolution.</p>
+      </div>
+      <div class="card" id="speaker2">
+        <img src="https://thumbs.dreamstime.com/b/casual-young-man-portrait-flat-vector-character-illustration-casual-young-man-portrait-374258975.jpg" alt="Rohan Das">
+        <h3>Rohan Das</h3>
+        <p>DevOps Lead · Amazon</p>
+        <p>Kubernetes, cloud scaling, and global infra in practice.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="fade-in">
+    <h2>🧩 Tracks & Themes</h2>
+    <div class="card-group">
+      <div class="card">
+        <h3>🧠 AI & ML</h3>
+        <p>LLMs, autonomous systems, deep learning innovation.</p>
+      </div>
+      <div class="card">
+        <h3>⚙️ DevOps & Infra</h3>
+        <p>CI/CD, microservices, SRE, and real-world deployment.</p>
+      </div>
+      <div class="card">
+        <h3>🌐 Web & UX</h3>
+        <p>React, motion UI, modern JS frameworks & design systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="fade-in">
+    <h2>📅 Full Agenda</h2>
+    <div class="card-group">
+      <div class="card" id="agenda1">
+        <h3>🚀 Day 1</h3>
+        <p>Keynotes + Workshops on AI Innovation</p>
+      </div>
+      <div class="card" id="agenda2">
+        <h3>☁️ Day 2</h3>
+        <p>Talks, live demos & panels – DevOps & Cloud Infra</p>
+      </div>
+      <div class="card" id="agenda3">
+        <h3>👩‍🎓 Day 3</h3>
+        <p>Hackathon finale, student startup showcase, awards</p>
+      </div>
+    </div>
+  </section>
+
+<section class="fade-in">
+  <h2>📍 Venue</h2>
+  <p style="text-align:center;" id="venue">
+    Bengaluru International Exhibition Centre, Tumkur Rd, Bengaluru
+  </p>
+  <div style="text-align:center;">
+    <iframe src="https://maps.google.com/maps?q=Bengaluru&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+  </div>
+</section>
+
+
+  <section class="fade-in">
+    <h2>🏆 Awards & Recognition</h2>
+    <div class="card-group">
+      <div class="card">
+        <h3>🏅 Best Project</h3>
+        <p>₹50,000 cash prize + mentorship + Certificate</p>
+      </div>
+      <div class="card">
+        <h3>🚀 Rising Talent</h3>
+        <p>Special award for student-led impact initiatives</p>
+      </div>
+      <div class="card">
+        <h3>🧠 Top Innovator</h3>
+        <p>AI + DevOps excellence award from jury panel</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="fade-in">
+    <h2>🤝 Partners & Sponsors</h2>
+    <div class="card-group">
+      <div class="card">OpenAI India</div>
+      <div class="card">Amazon AWS</div>
+      <div class="card">Google for Startups</div>
+    </div>
+  </section>
+
+
+
+<section class="cta fade-in" style="position: relative;">
+  <h2>🎟 Book Your Seat Today</h2>
+  <p>Early bird ends on Feb 20 · Free for students</p>
+  <button id="ctaBtn">Register Now</button>
+  <img src="https://static.vecteezy.com/system/resources/previews/025/442/421/non_2x/tickets-online-sale-tiny-people-with-big-ticket-for-cinema-theater-party-play-event-festival-concert-modern-flat-cartoon-style-illustration-on-white-background-vector.jpg" alt="Ticket Icon"
+       style="position: absolute; right: 40px; top: 10px; width: 150px; height: 150px; border-radius: 50%; 
+              box-shadow: 0 0 15px rgba(255,255,255,0.2); object-fit: cover;" 
+       class="cta-icon" />
+</section>
+
+
+  <footer>
+    &copy; 2025 TechFest · All rights reserved · 
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

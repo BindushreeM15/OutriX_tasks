@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customize Template 3 - TechGizmo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    .editor-panel {
+      width: 350px;
+      background: #1e293b;
+      color: white;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .editor-panel h2 {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+      color: #38bdf8;
+    }
+
+    .editor-panel label {
+      display: block;
+      margin-top: 12px;
+      font-size: 0.9em;
+    }
+
+    .editor-panel input,
+    .editor-panel textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: none;
+      font-family: inherit;
+    }
+
+    .editor-panel input:focus,
+    .editor-panel textarea:focus {
+      outline: 2px solid #38bdf8;
+    }
+
+    .download-btn {
+      margin-top: 20px;
+      background: #38bdf8;
+      border: none;
+      color: #1e293b;
+      font-weight: bold;
+      padding: 10px;
+      width: 100%;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .preview-panel {
+      flex: 1;
+      overflow-y: auto;
+      background: #111;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="editor-panel">
+    <a href="../index.html" style="text-decoration: none;">
+      <button class="download-btn" style="background:#334155; color:white;">← Back to Home</button>
+    </a>
+
+    <h2>🎛 Customize Electronics Landing</h2>
+
+    <label>Hero Title</label>
+    <input type="text" id="productTitle" value="🔌 TechGizmo" oninput="updatePreview()">
+
+    <label>Tagline</label>
+    <textarea id="productTagline" oninput="updatePreview()">Your one-stop hub for futuristic electronics built for life on-the-go.</textarea>
+
+    <label>CTA Button</label>
+    <input type="text" id="ctaBtn" value="Start Free Trial" oninput="updatePreview()">
+
+    <h2 style="margin-top:30px;">🧠 Products</h2>
+
+    <label>Product 1</label>
+    <input type="text" id="feature1" value="🎧 Smart Noise-Canceling Headphones" oninput="updatePreview()">
+
+    <label>Product 2</label>
+    <input type="text" id="feature2" value="📱 Foldable Touchscreen Smartphone" oninput="updatePreview()">
+
+    <label>Product 3</label>
+    <input type="text" id="feature3" value="⌚ AI Smartwatch Assistant" oninput="updatePreview()">
+
+    <label>Product 4</label>
+    <input type="text" id="feature4" value="💡 Smart Home Speaker Hub" oninput="updatePreview()">
+
+    <h2 style="margin-top:30px;">🔥 Offers Section</h2>
+
+    <label>Offer 1</label>
+    <input type="text" id="offer1" value="Wireless Earbuds - Flat 20% off · Type-C fast charge" oninput="updatePreview()">
+
+    <label>Offer 2</label>
+    <input type="text" id="offer2" value="Action Camera - Waterproof · 4K UHD · Adventure-ready" oninput="updatePreview()">
+
+    <label>Offer 3</label>
+    <input type="text" id="offer3" value="Gaming Laptop - RTX 4060 · ₹15,000 Off" oninput="updatePreview()">
+
+    <label>Offer 4</label>
+    <input type="text" id="offer4" value="Smart LED TV - Netflix · 43'' · Free Wall Mount " oninput="updatePreview()">
+
+    <button class="download-btn" onclick="downloadHTML()">⬇️ Download Page</button>
+  </div>
+
+  <div class="preview-panel">
+    <iframe id="previewFrame" src="../templates/template3.html"></iframe>
+  </div>
+
+  <script src="../customize.js"></script>
+</body>
+</html>

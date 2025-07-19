@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gizmopro - Smart Gadgets for Smarter Living</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+    }
+
+    a.back-preview {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #334155;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      z-index: 100;
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px 60px;
+      background: linear-gradient(to right, #1e3a8a, #2563eb);
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 80px 60px;
+      max-width: 1200px;
+      margin: auto;
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .section img {
+      width: 400px;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    .text {
+      flex: 1;
+    }
+
+    .text h2 {
+      font-size: 2rem;
+      color: #38bdf8;
+      margin-bottom: 15px;
+    }
+
+    .text p {
+      font-size: 1.05em;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #1e293b;
+      color: #94a3b8;
+      font-size: 0.9em;
+    }
+
+    .btn {
+  background: #facc15;
+  border: none;
+  color: #0f172a;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 1em;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #fbbf24;
+}
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column !important;
+        text-align: center;
+      }
+      .section img {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="../index.html" class="back-preview">← Exit</a>
+
+ <header>
+  <h1 id="productTitle">🔌 TechGizmo</h1>
+  <p id="productTagline">Your one-stop hub for futuristic electronics built for life on-the-go.</p>
+  <button id="ctaBtn" class="btn">Start Free Trial</button>
+</header>
+
+
+  <section class="section fade-in">
+    <div class="text">
+      <h2 id="feature1">🎧 Smart Noise-Canceling Headphones</h2>
+      <p>Experience immersive sound like never before. These adaptive noise-canceling headphones offer 40-hour battery life, AI voice enhancement, and ultra-light comfort for travel, work, and play.</p>
+    </div>
+    <img src="https://img.freepik.com/premium-vector/funky-colorful-drawn-musical-retro-headphones-vector-illustration_939711-1366.jpg?w=360" alt="Headphones" />
+  </section>
+
+  <section class="section fade-in">
+    <div class="text">
+      <h2 id="feature2">📱 Foldable Touchscreen Smartphone</h2>
+      <p>Introducing the next-gen pocket-sized powerhouse. With seamless folding display, 5G connectivity, and crystal-clear dual cameras, this device adapts to your needs instantly.</p>
+    </div>
+    <img src="https://media.sciencephoto.com/c0/26/62/78/c0266278-800px-wm.jpg" alt="Foldable Phone" />
+  </section>
+
+  <section class="section fade-in">
+    <div class="text">
+      <h2 id="feature3">⌚ AI Smartwatch Assistant</h2>
+      <p>Track fitness, control music, check notifications, or even pay wirelessly — all from your wrist. Our smartwatch learns your habits to deliver smarter alerts and health tracking.</p>
+    </div>
+    <img src="https://static.vecteezy.com/system/resources/previews/034/078/245/large_2x/innovative-smart-watches-with-combining-artificial-intelligence-ai-generative-photo.jpg" alt="Smartwatch" />
+  </section>
+
+  <section class="section fade-in">
+    <div class="text">
+      <h2 id="feature4">💡 Smart Home Speaker Hub</h2>
+      <p>Command your space with your voice. From weather to music to smart lights, this sleek speaker brings AI-powered control into your living room.</p>
+    </div>
+    <img src="https://img.freepik.com/premium-vector/smart-home-speaker-with-minimalist-design_968517-195436.jpg" alt="Smart Speaker" />
+  </section>
+
+  <section style="padding: 60px 20px; background: #1e293b;">
+  <h2 style="text-align:center; color: #38bdf8; margin-bottom: 40px;">🔥 Exclusive Offers on Top Gadgets</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; max-width: 1100px; margin: auto;">
+    
+    <div style="background:#0f172a; border: 1px solid #334155; padding: 20px; border-radius: 12px; text-align: center;">
+      <img src="https://5.imimg.com/data5/ECOM/Default/2025/2/490125245/GD/BD/GU/227229075/8098242996-500x500.jpg" style="width: 100px; margin-bottom: 10px;">
+      <h3 id="offer1" style="color:#facc15;">Wireless Earbuds</h3>
+      <p style="font-size: 0.9em;">Flat 20% off · Noise cancelling · Type-C fast charge</p>
+    </div>
+
+    <div style="background:#0f172a; border: 1px solid #334155; padding: 20px; border-radius: 12px; text-align: center;">
+      <img src="https://www.dpreview.com/files/p/articles/6269402639/canon_eosr8.jpeg" style="width: 150px; height:120px ;margin-bottom: 10px;">
+      <h3 id="offer2" style="color:#facc15;">Action Camera</h3>
+      <p style="font-size: 0.9em;">Waterproof · 4K UHD · Adventure-ready gear</p>
+    </div>
+
+    <div style="background:#0f172a; border: 1px solid #334155; padding: 20px; border-radius: 12px; text-align: center;">
+      <img src="https://i.rtings.com/assets/pages/6dRuEBex/best-gaming-laptops-20242028-medium.jpg?format=auto" style="width: 130px;height:120px; margin-bottom: 10px;">
+      <h3 id="offer3" style="color:#facc15;">Gaming Laptop</h3>
+      <p style="font-size: 0.9em;">RTX 4060 · 144Hz Display · ₹15,000 Off</p>
+    </div>
+
+    <div style="background:#0f172a; border: 1px solid #334155; padding: 20px; border-radius: 12px; text-align: center;">
+      <img src="https://www.myg.in/images/thumbnails/300/300/detailed/75/6_-ua43t5450akxxl-samsung-original-imaggc4zwhpmsy7a-removebg-preview.png.png" style="width: 130px; height:120px;margin-bottom: 10px;">
+      <h3 id="offer4" style="color:#facc15;">Smart LED TV</h3>
+      <p style="font-size: 0.9em;">Netflix built-in · 43" · Free wall mount</p>
+    </div>
+
+  </div>
+</section>
+
+  <footer>
+    &copy; 2025 TechGizmo Inc. Crafted  for tech lovers.
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.section').forEach(sec => observer.observe(sec));
+  </script>
+</body>
+</html>

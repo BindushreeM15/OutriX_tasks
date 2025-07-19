@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customize Blog (Template 4)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    .editor-panel {
+      width: 350px;
+      background: #f9f9f9;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .editor-panel h2 {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+    }
+
+    .editor-panel label {
+      display: block;
+      margin-top: 12px;
+    }
+
+    .editor-panel input, .editor-panel textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .download-btn {
+      margin-top: 20px;
+      background: #2ecc71;
+      border: none;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    iframe {
+      flex: 1;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="editor-panel">
+    <a href="../index.html" style="text-decoration: none;">
+      <button class="download-btn">← Back to Home</button>
+    </a>
+
+    <h2>📝 Customize Your Blog</h2>
+
+    <label>Blog Title</label>
+    <input type="text" id="blogTitle" value="🌼 My Cozy Blog" oninput="updatePreview()" />
+
+    <label>Subtitle</label>
+    <input type="text" id="blogSubtitle" value="Thoughts, stories & ideas by Me" oninput="updatePreview()" />
+
+    <label>Post 1 Title</label>
+    <input type="text" id="post1Title" value="📘 Why I Started Writing" oninput="updatePreview()" />
+
+    <label>Post 1 Content</label>
+    <textarea id="post1Content" oninput="updatePreview()">Writing clears the mind and captures the soul. Here's why blogging became my safe space...</textarea>
+
+    <label>Post 1 Image URL</label>
+    <input type="text" id="post1Image" value="https://img.freepik.com/premium-vector/letter-concept-illustration_114360-27243.jpg" oninput="updatePreview()" />
+   
+    <label>Post 2 Title</label>
+    <input type="text" id="post2Title" value="🧠 Lessons from My Gap Year" oninput="updatePreview()" />
+
+    <label>Post 2 Content</label>
+    <textarea id="post2Content" oninput="updatePreview()">Time off helped me reflect, reset, and rewire. These are my raw takeaways from a year offline...</textarea>
+
+    <label>Post 2 Image URL</label>
+    <input type="text" id="post2Image" value="https://static.vecteezy.com/system/resources/previews/008/985/748/non_2x/distance-learning-online-courses-and-business-education-online-books-and-textbooks-exam-preparation-home-schooling-flat-design-modern-illustration-vector.jpg" oninput="updatePreview()" />
+
+    <label>Post 3 Title</label>
+    <input type="text" id="post3Title" value="📚 What I'm Reading Now" oninput="updatePreview()" />
+
+    <label>Post 3 Content</label>
+    <textarea id="post3Content" oninput="updatePreview()">A quick dive into my current book stack and why each one matters to me right now.</textarea>
+
+    <label>Post 3 Image URL</label>
+    <input type="text" id="post3Image" value="https://img.freepik.com/premium-vector/woman-sitting-working-reading-book-room_760443-1059.jpg" oninput="updatePreview()" />
+    
+    <button class="download-btn" onclick="downloadHTML()">⬇️ Download Blog Page</button>
+  </div>
+
+  <iframe id="previewFrame" src="../templates/template4.html"></iframe>
+
+  <script src="../customize.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Startup Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff416c, #ff4b2b); 
+      color: white;
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+      animation: fadeInDown 1s ease;
+    }
+
+    header p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto;
+      animation: fadeIn 2s ease;
+    }
+
+    .btn-primary {
+      margin-top: 25px;
+      background: #fff;
+      color: #333;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: #f9c075;
+      transform: scale(1.05);
+    }
+
+    .features, .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 60px 40px;
+      background: #fff;
+    }
+
+    .feature-card, .testimonial-card {
+      background: #f1f1f1;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s;
+      animation: fadeInUp 1s ease;
+    }
+
+    .feature-card:hover,
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .feature-card h3,
+    .testimonial-card h3 {
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .cta {
+      background: #ffe17f;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+
+    .cta p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: #ccc;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .back-preview {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #333;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9em;
+      z-index: 999;
+      transition: background 0.3s ease;
+    }
+
+    .back-preview:hover {
+      background: #555;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      .cta h2 { font-size: 1.5em; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="../index.html" class="back-preview">← Exit</a>
+
+<header>
+  <h1>🚀 Turn Your Idea into Reality</h1>
+  <p>The perfect startup launchpad — convert visitors into users, and ideas into products.</p>
+  <button class="btn-primary">Start Building</button>
+</header>
+
+<section class="features">
+  <div class="feature-card">
+    <h3>🚀 MVP Ready in Minutes</h3>
+    <p>Skip the setup. Get your minimum viable product out fast with prebuilt templates.</p>
+  </div>
+  <div class="feature-card">
+    <h3>💡 Pitch-Perfect Design</h3>
+    <p>Capture attention with polished UI that’s demo day and investor ready.</p>
+  </div>
+  <div class="feature-card">
+    <h3>📈 Conversion-Optimized</h3>
+    <p>Strategically placed CTAs to guide your users and grow your mailing list.</p>
+  </div>
+  <div class="feature-card">
+    <h3>🤝 Made for Teams & Mentors</h3>
+    <p>Built to scale and collaborate, whether solo or with co-founders, mentors, or clients.</p>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="testimonial-card">
+    <h3>“From idea to launch in hours”</h3>
+    <p>I had no dev team, but this helped me pitch my startup in under 24 hours.</p>
+    <small>- Rhea, Founder of Planify</small>
+  </div>
+  <div class="testimonial-card">
+    <h3>“Investors loved the design”</h3>
+    <p>We used this for our MVP demo — and closed 2 pre-seed investors!</p>
+    <small>- Yash, Co-founder at FundBase</small>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>🚀 Ready to Launch?</h2>
+  <p>Let's build something that makes users say “wow.”</p>
+  <button class="btn-primary">Get Started Free</button>
+</section>
+
+<footer>
+  &copy; 2025 StartupKit. Crafted for dreamers & builders.
+</footer>
+
+</body>
+</html>

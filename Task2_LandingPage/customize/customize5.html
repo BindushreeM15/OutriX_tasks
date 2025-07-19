@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customize Template 5 </title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    .editor-panel {
+      width: 350px;
+      background: #f0f0f0;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .editor-panel h2 {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+    }
+
+    .editor-panel label {
+      display: block;
+      margin-top: 12px;
+    }
+
+    .editor-panel input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .download-btn {
+      margin-top: 20px;
+      background: #2ecc71;
+      border: none;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    iframe {
+      flex: 1;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="editor-panel">
+    <a href="../index.html" style="text-decoration: none;">
+      <button class="download-btn">← Back to Home</button>
+    </a>
+
+    <h2>🏢 Customize Agency Page</h2>
+
+    <label>Agency Name</label>
+    <input type="text" id="agencyName" value="NextGen Agency" oninput="updatePreview()" />
+
+    <label>Tagline</label>
+    <input type="text" id="agencyTagline" value="We craft digital solutions for bold brands." oninput="updatePreview()" />
+
+    <label>Service 1</label>
+    <input type="text" id="service1" value="📱 Mobile App Development" oninput="updatePreview()" />
+
+    <label>Service 2</label>
+    <input type="text" id="service2" value="💻 Web Design & Branding" oninput="updatePreview()" />
+
+    <label>Service 3</label>
+    <input type="text" id="service3" value="📈 SEO & Marketing" oninput="updatePreview()" />
+
+    <label>Team Member 1</label>
+    <input type="text" id="team1" value="👩‍💻 Jane - Creative Director" oninput="updatePreview()" />
+
+    <label>Team Member 2</label>
+    <input type="text" id="team2" value="👨‍💼 Mike - Project Manager" oninput="updatePreview()" />
+    
+    <h3>🖼 Logos</h3>
+
+<label>Logo 1 URL</label>
+<input type="text" id="logo1" value="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" oninput="updatePreview()" />
+
+<label>Logo 2 URL</label>
+<input type="text" id="logo2" value="https://upload.wikimedia.org/wikipedia/commons/4/4f/Angular_icon_%282021%29.svg" oninput="updatePreview()" />
+
+<label>Logo 3 URL</label>
+<input type="text" id="logo3" value="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" oninput="updatePreview()" />
+
+<h3>🗣 Testimonials</h3>
+
+<label>Testimonial 1</label>
+<input type="text" id="testimonial1" value="&quot;Their service exceeded all expectations! Highly recommend.&quot;" oninput="updatePreview()" />
+
+<label>Testimonial 2</label>
+<input type="text" id="testimonial2" value="&quot;Professional, punctual, and creative - great experience.&quot;" oninput="updatePreview()" />
+
+    <label>Contact Info</label>
+    <input type="text" id="contactInfo" value="hello@nextgenagency.com · +91 99889 77553" oninput="updatePreview()" />
+
+    <button class="download-btn" onclick="downloadHTML()">⬇️ Download Page</button>
+  </div>
+
+  <iframe id="previewFrame" src="../templates/template5.html"></iframe>
+
+  <script src="../customize.js"></script>
+</body>
+</html>
