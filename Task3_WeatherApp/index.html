@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="weather-container">
+    <h1>Weather App ☀️</h1>
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter City Name">
+      <button onclick="getWeather()">Search</button>
+    </div>
+    
+    <div id="weatherDisplay" class="weather-display">
+      <div class="today-weather">
+        <h2 id="location"><span>📍</span> Loading...</h2>
+        <img id="weatherIcon" src="https://as2.ftcdn.net/jpg/03/05/49/77/1000_F_305497783_yQ3kvh1suhLBB0Zxs7BCk4Uq3SvgfXiT.jpg" alt="">
+        <p id="description"></p>
+        <p>🌡️ Temp: <span id="temp"></span>°C</p>
+        <p>💧 Humidity: <span id="humidity"></span>%</p>
+        <p>💨 Wind: <span id="wind"></span> m/s</p>
+        <p>🌅 Sunrise: <span id="sunrise"></span></p>
+        <p>🌇 Sunset: <span id="sunset"></span></p>
+
+      </div>
+
+      <button onclick="toggleForecast()">Show Next Days</button>
+      <div id="forecastContainer" class="forecast hidden"></div>
+    </div>
+
+    <div id="weatherTip" class="tip-bar">🌦 Weather Tip:  hydrated during hot days!</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

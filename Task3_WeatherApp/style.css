@@ -1,0 +1,93 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #dbeafe, #f0f9ff);
+  color: #333;
+}
+
+.weather-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  backdrop-filter: blur(8px);
+    margin-top: 30px;
+}
+#location {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px; /* Push it a bit downward */
+  color: #222;
+}
+
+.search-box {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 60%;
+  max-width: 300px;
+  margin-right: 10px;
+  box-shadow: 0 0 5px #aaa;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #38bdf8;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.weather-display img {
+  width: 80px;
+  height: 80px;
+}
+
+.forecast {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 15px;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.forecast-day {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+  width: 120px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.tip-bar {
+  margin-top: 60px;
+  background-color: #dbeafe;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  animation: moveText 15s linear infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes moveText {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.hidden {
+  display: none;
+}
